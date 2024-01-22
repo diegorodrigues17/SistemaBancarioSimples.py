@@ -1,27 +1,27 @@
-# SistemaBancarioSimples.py
-menu = '''
-[1] Depósito
-[2] Saque
-[3] Extrato
-[4] Sair
-
-'''
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUE = 3
-valor = 0
-
-while True:
-    opcao = (input (f"{menu} escolha uma das opções: "))    
-    if opcao == "1":
-        while True:
-            try:    
-                valor = float(input("Escolha o valor a ser depositado: ")) 
-                break
-            except ValueError:
-                    print("Valor inválido!\n")
+    # SistemaBancarioSimples.py
+    menu = '''
+    [1] Depósito
+    [2] Saque
+    [3] Extrato
+    [4] Sair
+    
+    '''
+    saldo = 0
+    limite = 500
+    extrato = ""
+    numero_saques = 0
+    LIMITE_SAQUE = 3
+    valor = 0
+    
+    while True:
+        opcao = (input (f"{menu} escolha uma das opções: "))    
+        if opcao == "1":
+            while True:
+                try:    
+                    valor = float(input("Escolha o valor a ser depositado: ")) 
+                    break
+                except ValueError:
+                        print("Valor inválido!\n")
                         
             if valor > 0:
                 saldo += valor
